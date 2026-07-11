@@ -54,16 +54,36 @@ streamlit run app.py
 
 ## 📂 Project Structure
 
-CareerCompass-AI
+```text
+CareerCompass-AI/
 │
-├── app.py
-├── database.py
-├── pages/
-├── utils/
-├── assets/
+├── app.py                      # Main Streamlit application
+├── database.py                 # Database functions
+├── requirements.txt            # Project dependencies
+├── README.md                   # Project documentation
+├── .gitignore                  # Git ignored files
+├── .env                        # Environment variables (not uploaded to GitHub)
+│
+├── assets/                     # Images and screenshots
+│
 ├── database/
-├── requirements.txt
-└── README.md
+│   └── placement.db            # SQLite database
+│
+├── pages/
+│   ├── 1_Profile.py
+│   ├── 2_Company_Eligibility.py
+│   ├── 3_DSA_Tracker.py
+│   ├── 4_Aptitude.py
+│   ├── 5_Interview_Tracker.py
+│   ├── 6_Resume_Manager.py
+│   ├── 7_Analytics.py
+│   └── 8_AI_Resume_Analyzer.py
+│
+├── resumes/                    # Uploaded resumes
+│
+└── utils/
+    └── gemini_helper.py        # Gemini AI helper functions
+```
 
 ## 📸 Screenshots
 
