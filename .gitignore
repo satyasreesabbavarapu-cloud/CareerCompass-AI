@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+placement.db
+database/placement.db
+.env
+resumes/
