@@ -67,6 +67,9 @@ conn.commit()
 # Student Functions
 # ===================================
 
+def get_connection():
+    return sqlite3.connect(DB_PATH)
+
 def save_student(name, roll_no, branch, cgpa, graduation_year):
     cursor.execute("""
     INSERT INTO student(name, roll_no, branch, cgpa, graduation_year)
@@ -76,8 +79,12 @@ def save_student(name, roll_no, branch, cgpa, graduation_year):
 
 
 def get_student():
-    cursor.execute("SELECT * FROM student ORDER BY id DESC LIMIT 1")
-    return cursor.fetchone()
+    with get_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute(
+            "SELECT * FROM student ORDER BY id DESC LIMIT 1"
+        )
+        return cursor.fetchone()
 
 
 # ===================================
